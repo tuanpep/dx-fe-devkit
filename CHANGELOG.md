@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.3.2 — 2026-04-01
+
+- Move plugin payload under `plugins/dx-fe-devkit/` so team marketplace `pluginRoot` resolves (fixes install ENOENT).
+
 ## 0.3.1 — 2026-04-01
 
 - `dx-ui`: floorplan-first create rules (P1–P7 + one job before layout).

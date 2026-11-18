@@ -5,7 +5,7 @@
   },
   "metadata": {
     "description": "Enterprise React agent kit: architecture, admin UX, tests, i18n, security, performance, forms, Mantine.",
-    "version": "0.3.1",
+    "version": "0.3.2",
     "pluginRoot": "plugins"
   },
   "plugins": [

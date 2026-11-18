@@ -12,10 +12,11 @@
 $ErrorActionPreference = "Stop"
 
 $repoRoot = Split-Path -Parent (Split-Path -Parent $MyInvocation.MyCommand.Path)
+$pluginRoot = Join-Path $repoRoot "plugins\dx-fe-devkit"
 $localPlugins = Join-Path $env:USERPROFILE ".cursor\plugins\local"
 $dest = Join-Path $localPlugins "dx-fe-devkit"
 
-$manifest = Join-Path $repoRoot ".cursor-plugin\plugin.json"
+$manifest = Join-Path $pluginRoot ".cursor-plugin\plugin.json"
 if (-not (Test-Path $manifest)) {
   Write-Error "Missing Cursor Plugin manifest: $manifest"
 }
@@ -33,7 +34,6 @@ if (Test-Path $dest) {
 
 New-Item -ItemType Directory -Force -Path $dest | Out-Null
 
-# Mirror plugin payload only (skip git / agent tooling noise).
 $include = @(
   ".cursor-plugin",
   "skills",
@@ -41,15 +41,11 @@ $include = @(
   "commands",
   "mcp.json",
   "plugin.json",
-  "README.md",
-  "LICENSE",
-  "CHANGELOG.md",
-  "AGENTS.md",
   "templates"
 )
 
 foreach ($name in $include) {
-  $src = Join-Path $repoRoot $name
+  $src = Join-Path $pluginRoot $name
   if (-not (Test-Path $src)) { continue }
   $target = Join-Path $dest $name
   if ((Get-Item $src).PSIsContainer) {
