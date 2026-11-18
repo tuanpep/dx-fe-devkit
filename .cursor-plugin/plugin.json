@@ -4,7 +4,7 @@
   "version": "0.3.1",
   "description": "Enterprise React agent kit (11 skills): fe-kit hub, fe-architecture, dx-ui, fe-testing, fe-forms, fe-i18n, fe-security, fe-performance, fe-naming, fe-mantine. One repo-binding template.",
   "author": {
-    "name": "CMC DX"
+    "name": "dx-fe-devkit"
   },
   "license": "MIT",
   "keywords": [
@@ -18,9 +18,5 @@
     "agent-skills"
   ],
   "category": "developer-tools",
-  "tags": ["frontend", "react", "skills", "ux", "architecture"],
-  "skills": "./skills/",
-  "rules": "./rules/",
-  "commands": "./commands/",
-  "mcpServers": "./mcp.json"
+  "tags": ["frontend", "react", "skills", "ux", "architecture"]
 }

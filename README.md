@@ -12,18 +12,31 @@ Consumer repos: [repo-binding-template](skills/fe-kit/references/repo-binding-te
 
 ## Install
 
-**From GitHub (recommended):** in Cursor, open **Customize → Plugins**, paste:
+Layout: **single-plugin** at repo root (`.cursor-plugin/plugin.json` + root `plugin.json` for Agent Plugins). Official refs: [Plugins](https://cursor.com/docs/plugins), [Plugins reference](https://cursor.com/docs/reference/plugins).
 
-`https://github.com/tuanpep/dx-fe-devkit`
+### Local (dev / verify)
 
-Install **dx-fe-devkit**, then reload the window.
-
-**Local development only:**
+Cursor loads `~/.cursor/plugins/local/<name>` as a **real directory**. External junctions/symlinks are skipped.
 
 ```powershell
 .\scripts\link-local-plugin.ps1
 ```
 
-Then enable **dx-fe-devkit** in **Customize → Plugins**. Cursor only loads local junctions whose target stays under `~/.cursor/plugins/local`.
+Then **Developer: Reload Window** → enable **dx-fe-devkit** in **Customize → Plugins**. Re-run after repo edits (local is a copy).
+
+### Team marketplace
+
+**Import from Repo** is reliable with multi-plugin layout:
+
+- `.cursor-plugin/marketplace.json` (`name`, `owner`, `plugins[]` with bare `source` names)
+- `plugins/<name>/.cursor-plugin/plugin.json`
+
+This repo is still single-plugin at root (fine for local + public submit). For team Import, restructure under `plugins/dx-fe-devkit/` first — `source: "."` is rejected by current marketplace parsing.
+
+Dashboard: **Plugins & MCPs → Team Marketplaces → Add Marketplace → Import from Repo**.
+
+### Public marketplace
+
+Submit at [cursor.com/marketplace/publish](https://cursor.com/marketplace/publish) after local verify.
 
 MIT — [LICENSE](LICENSE)

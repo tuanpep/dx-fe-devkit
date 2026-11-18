@@ -1,7 +1,8 @@
 {
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
   "name": "dx-fe-devkit",
   "description": "Portable agent kit for enterprise React frontends (Agent Plugins manifest).",
   "version": "0.3.1",
-  "author": { "name": "CMC DX" },
+  "author": { "name": "dx-fe-devkit" },
   "license": "MIT"
 }
