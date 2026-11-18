@@ -1,0 +1,14 @@
+---
+description: >-
+  When doing React or admin UI work, resolve repo project-binding then load
+  fe-kit skill routing before proposing structure or layout.
+alwaysApply: false
+globs:
+  - "**/*.{tsx,ts,jsx,js}"
+---
+
+# DX FE DevKit
+
+1. Read repo `AGENTS.md` and `.cursor/skills/**/project-binding.md` if present.
+2. Use `@fe-kit`; data/Nx/MF live under `fe-architecture` (not separate skills).
+3. Do not assume Next.js, Tailwind, or a fixed monorepo path unless binding says so.

@@ -1,0 +1,7 @@
+{
+  "name": "dx-fe-devkit",
+  "description": "Portable agent kit for enterprise React frontends (Agent Plugins manifest).",
+  "version": "0.3.1",
+  "author": { "name": "CMC DX" },
+  "license": "MIT"
+}
