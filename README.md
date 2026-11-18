@@ -12,10 +12,18 @@ Consumer repos: [repo-binding-template](skills/fe-kit/references/repo-binding-te
 
 ## Install
 
+**From GitHub (recommended):** in Cursor, open **Customize → Plugins**, paste:
+
+`https://github.com/tuanpep/dx-fe-devkit`
+
+Install **dx-fe-devkit**, then reload the window.
+
+**Local development only:**
+
 ```powershell
 .\scripts\link-local-plugin.ps1
 ```
 
-Enable **dx-fe-devkit** in Cursor **Customize → Plugins**.
+Then enable **dx-fe-devkit** in **Customize → Plugins**. Cursor only loads local junctions whose target stays under `~/.cursor/plugins/local`.
 
 MIT — [LICENSE](LICENSE)
