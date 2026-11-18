@@ -1,0 +1,17 @@
+{
+  "name": "dx-fe-devkit",
+  "owner": {
+    "name": "tuanpep",
+    "email": "tuanbt209@gmail.com"
+  },
+  "metadata": {
+    "description": "Enterprise React agent kit: architecture, admin UX, tests, i18n, security, performance, forms, Mantine."
+  },
+  "plugins": [
+    {
+      "name": "dx-fe-devkit",
+      "source": ".",
+      "description": "Enterprise React agent kit (11 skills): fe-kit hub, fe-architecture, dx-ui, fe-testing, fe-forms, fe-i18n, fe-security, fe-performance, fe-naming, fe-mantine."
+    }
+  ]
+}
