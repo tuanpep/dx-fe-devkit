@@ -1,8 +1,8 @@
 {
   "name": "dx-fe-devkit",
   "displayName": "DX FE DevKit",
-  "version": "0.4.0",
-  "description": "Enterprise React agent kit (12 skills): fe-kit hub, fe-architecture, dx-ui, fe-testing, fe-forms, fe-i18n, fe-security, fe-performance, fe-naming, fe-mantine, fe-git-workflow. One repo-binding template.",
+  "version": "0.5.0",
+  "description": "Enterprise React agent kit (13 skills): fe-kit hub, fe-architecture, dx-ui, fe-testing, fe-forms, fe-i18n, fe-security, fe-performance, fe-naming, fe-mantine, fe-git-workflow, fe-url-state. One repo-binding template.",
   "author": {
     "name": "dx-fe-devkit"
   },

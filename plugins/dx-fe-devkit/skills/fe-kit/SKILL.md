@@ -2,7 +2,8 @@
 name: fe-kit
 description: >-
   Hub for DX FE DevKit: routes to fe-architecture, dx-ui, fe-testing, fe-forms,
-  fe-i18n, fe-security, fe-performance, fe-naming, fe-mantine, fe-git-workflow.
+  fe-i18n, fe-security, fe-performance, fe-naming, fe-mantine, fe-git-workflow,
+  fe-url-state.
   Resolves
   repo-binding before any React enterprise work.
 ---
@@ -32,6 +33,7 @@ Catalog: [kit-catalog](references/kit-catalog.md).
 | CWV / bundle | `@fe-performance` | `SKILL.md` → task table |
 | Mantine | `@fe-mantine` | `package.json` + MCP |
 | Git branches, commits, PRs | `@fe-git-workflow` | `SKILL.md` → task table |
+| URL search params, list filters | `@fe-url-state` | `SKILL.md` → task table |
 | Verify gates | [verify-matrix](references/verify-matrix.md) | Binding commands |
 
 ## Bootstrap

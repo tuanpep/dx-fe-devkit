@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.0 — 2026-11-19
+
+- New **fe-url-state** skill: URL search params for list filters, parse/validate, router binding, React Query sync (13 skills).
+- **fe-kit** routing, **kit-catalog**, **repo-binding-template**, and marketplace/plugin manifests updated.
+
 ## 0.4.0 — 2026-11-19
 
 - Hub-style expansion for **fe-performance**, **fe-security**, **fe-testing**, **fe-forms**, **fe-naming**, **fe-i18n** (reference docs + binding fields).

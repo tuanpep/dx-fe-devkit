@@ -107,6 +107,21 @@ Table/form/dialog components, tokens, verify — [dx-ui project-binding-template
 | Date/time timezone policy | |
 | Draft / save API | If any — no fake draft otherwise |
 
+## URL state (`fe-url-state`)
+
+| Field | Notes |
+| ----- | ----- |
+| Router | `react-router` \| `next-app` \| `tanstack-router` |
+| Search update API | e.g. `useSearchParams`, `nuqs`, route `validateSearch` |
+| Query param naming | flat vs prefixed; array encoding (repeat vs comma) |
+| List defaults | `page`, `pageSize` |
+| Filter debounce ms | Text search before URL write |
+| History policy | `replace` for filter edits; when to `push` |
+| Saved view key | e.g. `presetId` / `view` for large filters |
+| Parse/serialize module | e.g. shared `domain/*Search.ts` |
+
+Detail: [fe-url-state schema](../../fe-url-state/references/project-binding-schema.md).
+
 ## Security (`fe-security`)
 
 | Field | Notes |

@@ -5,14 +5,14 @@
   },
   "metadata": {
     "description": "Enterprise React agent kit: architecture, admin UX, tests, i18n, security, performance, forms, Mantine.",
-    "version": "0.4.0",
+    "version": "0.5.0",
     "pluginRoot": "plugins"
   },
   "plugins": [
     {
       "name": "dx-fe-devkit",
       "source": "dx-fe-devkit",
-      "description": "Enterprise React agent kit (12 skills): fe-kit hub, fe-architecture, dx-ui, fe-testing, fe-forms, fe-i18n, fe-security, fe-performance, fe-naming, fe-mantine, fe-git-workflow."
+      "description": "Enterprise React agent kit (13 skills): fe-kit hub, fe-architecture, dx-ui, fe-testing, fe-forms, fe-i18n, fe-security, fe-performance, fe-naming, fe-mantine, fe-git-workflow, fe-url-state."
     }
   ]
 }

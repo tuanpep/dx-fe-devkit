@@ -16,6 +16,7 @@
 | `fe-performance` | CWV (LCP/INP/CLS), budgets, SPA route timings, enterprise tables |
 | `fe-mantine` | Mantine MCP & version discipline |
 | `fe-git-workflow` | Branching model, commits, PRs, releases (binding) |
+| `fe-url-state` | Search params, shareable list/filter state, router binding |
 
 **Out of scope:** marketing sites, non-React stacks, full DevOps/CDN.
 
