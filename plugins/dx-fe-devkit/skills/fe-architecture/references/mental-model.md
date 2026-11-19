@@ -80,5 +80,7 @@ Conceptual FSD checks (no Steiger required): no upward layer imports; no feature
 
 ## Related
 
+- [agent-workflow.md](agent-workflow.md)
+- [standards-comparison.md](standards-comparison.md)
 - [layout.md](layout.md)
 - [oss-fe-matrix.md](oss-fe-matrix.md)

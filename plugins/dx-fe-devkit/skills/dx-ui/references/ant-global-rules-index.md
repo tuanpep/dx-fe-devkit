@@ -41,7 +41,7 @@ Ant documents **global rules** under [ant.design/docs/spec](https://ant.design/d
 | ------------ | ------- | ------- | --------- |
 | List Page | [research-list](https://ant.design/docs/spec/research-list) | P1 | [page-templates](page-templates.md) |
 | Form Page | [research-form](https://ant.design/docs/spec/research-form) | P3 | [forms-validation-ux](forms-validation-ux.md) |
-| Workbench | [research-workbench](https://ant.design/docs/spec/research-workbench) | P4 | [layout-design](layout-design.md) |
+| Workbench | [research-workbench](https://ant.design/docs/spec/research-workbench) | P4 | [page-templates](page-templates.md) § P4, [layout-design](layout-design.md) |
 | Result Page | [research-result](https://ant.design/docs/spec/research-result) | P6 | [page-templates](page-templates.md) |
 | Exception Page | [research-exception](https://ant.design/docs/spec/research-exception) | P7 | [page-templates](page-templates.md) |
 | Empty Status | [research-empty](https://ant.design/docs/spec/research-empty) | — | [feedback-states](feedback-states.md) |

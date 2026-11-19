@@ -15,8 +15,10 @@ Copy this into **the repository** at `.cursor/skills/fe-architecture/references/
 | **Public API** | Feature `index.ts` rules; cross-module import policy |
 | **Splitting** | Lazy route entry pattern |
 | **Review auditor vars** | `<APP_SRC>`, `<MODULE_ROOT>`, `<RQ_SYMBOLS>`, etc. |
+| **Cross-slice policy** | `index.ts` only vs strict module compose |
 | **HTTP client / API types** | Package or path to generated types |
 | **Nx** | Default app project; lint / test / build commands |
+| **Stack profile** | See [stack-profiles](../../fe-kit/references/stack-profiles.md) if non-Vite/Nx |
 
 ## Optional fields
 

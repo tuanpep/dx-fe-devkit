@@ -18,12 +18,14 @@ Scorecard dimension at **0** on trust, a11y, or feedback usually → P0.
 | Category | Examples |
 | -------- | -------- |
 | Pattern | Detail in modal for primary entity |
+| Detail sub-template | Approval on P2c tabs only; P2a content in multi-card chrome — [page-templates](../../dx-ui/references/page-templates.md) § P2 |
+| Workbench | P4 with embedded primary list or &gt;9 modules — use P1 route + hub tiles |
 | Queue | Filter/page not persisted when spec requires |
 | Messaging | Wrong channel (toast for validation) |
 | Copy | No reason+fix |
 | Layout | Page-level horizontal scroll for table |
 
-Scorecard **1** on template fit, navigation loop, search/filters, permissions, messaging.
+Scorecard **1** on template fit, **detail sub-template (14)**, **workbench (15)**, navigation loop, search/filters, permissions, messaging.
 
 ## P2 — Polish (defer unless cheap)
 

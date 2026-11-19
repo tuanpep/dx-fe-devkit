@@ -1,5 +1,7 @@
 # Naming standards — references and edge cases
 
+Task hub: [SKILL.md](SKILL.md). Repo-specific: [references/project-binding.md](references/project-binding.md).
+
 ## Authoritative external sources
 
 | Source | Scope | URL |

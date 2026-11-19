@@ -91,3 +91,5 @@ Packages and re-exports: [module-ui-component-packages.md](module-ui-component-p
 - [ ] No new `utils/` / `services/` folders.
 
 Refactor existing flat code: `api` → `data` → `domain` → `ui` last.
+
+Scenarios: [agent-workflow.md](agent-workflow.md).

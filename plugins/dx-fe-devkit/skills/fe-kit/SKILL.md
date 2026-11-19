@@ -2,7 +2,8 @@
 name: fe-kit
 description: >-
   Hub for DX FE DevKit: routes to fe-architecture, dx-ui, fe-testing, fe-forms,
-  fe-i18n, fe-security, fe-performance, fe-naming, fe-mantine. Resolves
+  fe-i18n, fe-security, fe-performance, fe-naming, fe-mantine, fe-git-workflow.
+  Resolves
   repo-binding before any React enterprise work.
 ---
 
@@ -20,16 +21,17 @@ Catalog: [kit-catalog](references/kit-catalog.md).
 
 | Task | Skill | Entry |
 | ---- | ----- | ----- |
-| Structure, queries, Nx, MF, API errors | `@fe-architecture` | `references/depth-and-anti-flatten.md` |
+| Structure, queries, Nx, MF, API errors | `@fe-architecture` | `SKILL.md` → task table |
 | Admin screen UX | `@dx-ui` | `references/ant-spec-index.md` |
 | UX audit | `@dx-ui-review` | `references/audit-workflow.md` |
-| Names & files | `@fe-naming` | `references/project-binding.md` |
-| Forms (implementation) | `@fe-forms` | `SKILL.md` + binding |
-| Tests | `@fe-testing` | `references/jest-rtl.md` |
-| i18n keys / verify | `@fe-i18n` | `references/key-workflow.md` |
-| SPA security | `@fe-security` | `references/spa-checklist.md` |
-| CWV / bundle | `@fe-performance` | `references/cwv-and-bundle.md` |
+| Names & files | `@fe-naming` | `SKILL.md` → task table |
+| Forms (implementation) | `@fe-forms` | `SKILL.md` → task table |
+| Tests | `@fe-testing` | `SKILL.md` → task table |
+| i18n keys / verify | `@fe-i18n` | `SKILL.md` → task table |
+| SPA security | `@fe-security` | `SKILL.md` → task table |
+| CWV / bundle | `@fe-performance` | `SKILL.md` → task table |
 | Mantine | `@fe-mantine` | `package.json` + MCP |
+| Git branches, commits, PRs | `@fe-git-workflow` | `SKILL.md` → task table |
 | Verify gates | [verify-matrix](references/verify-matrix.md) | Binding commands |
 
 ## Bootstrap

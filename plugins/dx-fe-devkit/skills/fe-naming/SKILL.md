@@ -1,113 +1,76 @@
 ---
 name: fe-naming
 description: >-
-  Applies widely adopted naming standards for identifiers, files, and folders in
-  TypeScript/React/Nx (and similar) repos via project binding. Synthesizes Clean
-  Code meaningful-name rules with Google TS, PEP 8, and Airbnb React guidance.
-  Use when naming or renaming variables, functions, classes, types, tests, API
-  fields, modules, or paths; reviewing unclear names; or when no local linter
-  rule applies. Read references/project-binding.md for this repo first.
+  Enterprise React/TS naming: identifiers, files, folders, hooks, tests, API
+  fields, query keys, i18n keys. Resolves fe-naming project-binding before
+  Google/Airbnb/Clean Code defaults. Use when naming or renaming symbols,
+  creating paths in vertical slices, reviewing unclear names, or linter has no
+  rule.
 ---
 
-# Code naming conventions
+# FE naming
 
-Portable skill. **Repo paths and test/file patterns:** [references/project-binding.md](references/project-binding.md) → repo file or [project-binding-schema](references/project-binding-schema.md). Slice layout: [fe-architecture](../fe-architecture/SKILL.md). Hub: `@fe-kit`.
+Portable skill (`plugins/dx-fe-devkit/skills`). **Repo SSOT:** [project-binding](references/project-binding.md) → consumer `.cursor/skills/fe-naming/references/project-binding.md` ([schema](references/project-binding-schema.md)). **Layout context:** `@fe-architecture`. Hub: `@fe-kit`.
 
 ## Priority order
 
-1. **This repo** — [project-binding](references/project-binding.md), module `AGENTS.md`, ESLint config, neighboring files in the same feature.
-2. **Language / ecosystem** — [reference.md](reference.md).
-3. **Universal semantics** — rules below.
+1. **Active repo** — `project-binding`, module `AGENTS.md`, ESLint, 3–5 neighbors in same folder.
+2. **This kit** — reference docs below when binding silent.
+3. **External guides** — [reference.md](reference.md) (Google TS, Airbnb React, Clean Code).
 
-When repo style conflicts with an external guide, follow the repo.
+**Repo wins** over generic rules.
 
-## Universal rules (Clean Code + style guides)
+## Principles (Clean Code, condensed)
 
-| Rule | Do | Avoid |
-|------|----|--------|
-| Reveal intent | `daysUntilExpiration`, `fetchUserById` | `d`, `data2`, `temp` |
-| Meaningful distinction | `sourceMessage`, `destinationMessage` | `message1`, `message2` |
-| Pronounceable | `generationTimestamp` | `genymdhms` |
-| Searchable | `MAX_RETRIES`, `userId` | bare `5`, single-letter except tiny scopes |
-| No type encoding | `name` (type is in the signature) | `strName`, `m_count`, `opt_timeout` |
-| One word per concept | Always `fetch` (or always `get`) | mixing `fetch`, `retrieve`, `get` |
-| Class / type = noun | `TodoItem`, `PaymentGateway` | vague `Manager`, `Data`, `Info` |
-| Function / method = verb | `calculateTotal`, `save`, `isValid` | `total()`, `validation()` |
-| Scope ↔ length | Short names in ≤10-line local scope only | cryptic public API names |
-| Constants | Named literals at module scope | magic numbers/strings inline |
-| Acronyms | `loadDnsRecord`, `HttpServer` | mixed `HTTPRequest` vs `HttpRequest` in one codebase |
+| Principle | Rule |
+| --------- | ---- |
+| Intent | Names explain *why*, not *how* — no `data2`, `temp` |
+| Distinction | `source` / `destination`, not `msg1` / `msg2` |
+| Searchable | Named constants for magic values |
+| No type encoding | `name`, not `strName` — types carry types |
+| One concept | Pick `fetch` *or* `get` module-wide |
+| Scope vs length | Single letter only in ≤10-line locals |
+| Layer nouns | Match `api` / `data` / `domain` / `ui` — not random `Manager` |
 
-**Boolean / React:** `isActive`, `hasPermission`, `canEdit`; handlers/props `onChange`, `onSubmit`. **Tests:** behavior in the name — `rejectsExpiredContract`; colocate as `*.spec.ts(x)` per [project-binding](references/project-binding.md).
+## Read by task
 
-## TypeScript / React (primary in this repo)
+| Task | Read |
+| ---- | ---- |
+| Variables, types, functions, constants | [identifiers-typescript-react](references/identifiers-typescript-react.md) |
+| Pages, features, module paths | [files-and-folders](references/files-and-folders.md) |
+| Components, props, hooks | [hooks-and-components](references/hooks-and-components.md) |
+| `*.spec.ts(x)`, test names | [tests-and-specs](references/tests-and-specs.md) |
+| DTOs, OpenAPI fields, mappers | [api-and-domain-types](references/api-and-domain-types.md) |
+| `queryKeys`, hooks in `data/` | [query-and-mutations](references/query-and-mutations.md) |
+| Translation key paths | [i18n-keys](references/i18n-keys.md) |
+| Rename PR, review output | [review-workflow](references/review-workflow.md) |
+| Smells, banned roots | [anti-patterns](references/anti-patterns.md) |
+| Java/Python/Go, debates | [reference.md](reference.md) |
+| Before/after | [examples.md](examples.md) |
 
-| Identifier | Casing | Example |
-|------------|--------|---------|
-| Class, interface, type, enum | PascalCase | `UserConfig`, `RequestStatus` |
-| Function, method, variable, parameter | camelCase | `loadUsers`, `customerId` |
-| Module constant | SCREAMING_SNAKE | `MAX_PAGE_SIZE` |
-| React component | PascalCase | `OrderRecordsPage` |
-| React hook | camelCase, `use` prefix | `useTodoList` |
-| JSX instance variable | camelCase | `const reservation = <ReservationCard />` |
-
-Sources: [Google TypeScript Guide](https://google.github.io/styleguide/tsguide.html), [Airbnb React](https://github.com/airbnb/javascript/blob/master/react/README.md).
-
-Other languages (Java, Python, Go) when touching scripts or non-TS packages: [reference.md](reference.md).
-
-## Files and directories
-
-**Consistency in the parent folder beats global debates.**
-
-| Context | Pattern in sample-admin |
-|---------|--------------------------|
-| Product module | `apps/admin/src/modules/<product>/` kebab-case product id |
-| Feature slice | `features/<kebab-slice>/{api,data,domain,ui}` |
-| Module UI packages | `ui/<role>/<kebab>/` — see [fe-architecture](../fe-architecture/SKILL.md) |
-| API field names | Match shared UI/types packages and generated clients — do not invent parallel names |
-
-## Agent workflow
-
-### New symbol
-
-1. Read 3–5 neighbors in the same file or feature.
-2. Match casing, test suffix, and verb vocabulary (`get` vs `fetch`).
-3. Prefer domain terms from types/docs on public surfaces.
-4. Distinguish collections explicitly: `userIds` vs `usersById`.
-
-### Review / rename
-
-1. Flag magic numbers and opaque abbrevs.
-2. Flag mixed layer metaphors (`Controller` vs `Manager` vs `Service`).
-3. Keep renames mechanical; do not rename across repos in one change unless asked.
-
-### Checklist
+## Quick workflow
 
 ```
-- [ ] Intent clear without comment?
-- [ ] Matches project-binding + neighbors?
-- [ ] Boolean / on* handlers correct?
-- [ ] File name matches primary export here?
-- [ ] spec file naming matches sibling tests?
+Binding → neighbors → pick reference doc →
+checklist (review-workflow) → lint if bound
 ```
 
-## Review output
+## Cross-skill
 
-```markdown
-## Summary
-[One sentence: consistency with repo + standards]
+| Topic | Skill |
+| ----- | ----- |
+| Where files go | `@fe-architecture` [depth-and-anti-flatten](../fe-architecture/references/depth-and-anti-flatten.md) |
+| Colocated tests | `@fe-testing` [colocation-and-naming](../fe-testing/references/colocation-and-naming.md) |
+| Form field / schema names | `@fe-forms` [architecture-and-ownership](../fe-forms/references/architecture-and-ownership.md) |
+| Copy (not key structure) | `@dx-ui` [microcopy-voice](../dx-ui/references/microcopy-voice.md) |
 
-## Critical
-- `symbol` — [issue] → `betterName`
+## Out of scope
 
-## Suggestions
-- ...
+Product marketing names, git branch policy ([`@fe-git-workflow`](../fe-git-workflow/SKILL.md)), database column renames in applied migrations ([reference.md](reference.md)).
 
-## Conventions applied
-[project-binding OR external guide]
-```
+## External SSOT
 
-## Additional resources
-
-- [references/project-binding.md](references/project-binding.md) — repo naming SSOT
-- [reference.md](reference.md) — external sources, Java/Python/Go, debates
-- [examples.md](examples.md) — before/after
+| Source | Link |
+| ------ | ---- |
+| Google TypeScript | https://google.github.io/styleguide/tsguide.html |
+| Airbnb React | https://github.com/airbnb/javascript/blob/master/react/README.md |

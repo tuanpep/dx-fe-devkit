@@ -6,7 +6,7 @@ Canonical URL root: https://ant.design/docs/spec/
 
 This file maps **every Ant spec doc** to **local dx-ui references**. **Detailed decisions:** [ant-design-comprehensive-guide](ant-design-comprehensive-guide.md). Do not duplicate vendor prose — read local refs in hard mode; use Ant URLs for gaps.
 
-**Legend:** ✅ mapped · 🔶 partial (summary only) · ⬜ extend local ref when touching topic
+**Legend:** ✅ mapped · 🔶 partial (summary only) · ⬜ out of scope or Ant-only. Interaction global rules (direct/stay/…) are 🔶 by design—use [ant-global-rules-index](ant-global-rules-index.md) then topic refs.
 
 ---
 
@@ -16,7 +16,7 @@ This file maps **every Ant spec doc** to **local dx-ui references**. **Detailed 
 | ------- | --- | --------- | ----- |
 | Introduce | [introduce](https://ant.design/docs/spec/introduce) | [ant-design-deep](ant-design-deep.md) | Enterprise patterns, modular reuse |
 | Design values | [values](https://ant.design/docs/spec/values) | [ant-design-deep](ant-design-deep.md), [principles-matrix](principles-matrix.md) (ops criteria) | Natural, Certain, Meaningful, Growing |
-| Cases | [cases](https://ant.design/docs/spec/cases) | — | Portfolio only |
+| Cases | [cases](https://ant.design/docs/spec/cases) | — ⬜ | Portfolio / marketing showcase; **out of dx-ui scope** (enterprise admin). Use Ant URL only for inspiration—not ship criteria |
 | Pattern overview | [overview](https://ant.design/docs/spec/overview) | [pattern-vocabulary](pattern-vocabulary.md), [ant-global-rules-index](ant-global-rules-index.md) | Templates + global rules catalog |
 
 ---
@@ -32,7 +32,7 @@ This file maps **every Ant spec doc** to **local dx-ui references**. **Detailed 
 | Dark mode | [dark](https://ant.design/docs/spec/dark) | [visual-foundations](visual-foundations.md) | Algorithm + surface ladder |
 | Shadow | [shadow](https://ant.design/docs/spec/shadow) | [visual-foundations](visual-foundations.md), `design.md` elevation | Flat-first; popup tiers |
 | Motion | [motion](https://ant.design/docs/spec/motion) | [motion-feedback](motion-feedback.md) | Durations / easings as tokens |
-| Illustration | [illustration](https://ant.design/docs/spec/illustration) | [feedback-states](feedback-states.md) | Empty/exception art |
+| Illustration | [illustration](https://ant.design/docs/spec/illustration) | [feedback-states](feedback-states.md) § Illustrations | Empty/exception art; invitation pairing |
 | Visualization page | [visualization-page](https://ant.design/docs/spec/visualization-page) | [dashboards-and-viz](dashboards-and-viz.md) | Reports scope |
 | Visual (principles) | [visual](https://ant.design/docs/spec/visual) | [visual-foundations](visual-foundations.md), [dashboards-and-viz](dashboards-and-viz.md) | Charts: accuracy/clarity; admin scope |
 
@@ -72,7 +72,7 @@ Consolidated table: [ant-global-rules-index](ant-global-rules-index.md).
 | ------- | --- | --------- |
 | Feedback | [feedback](https://ant.design/docs/spec/feedback) | [feedback-states](feedback-states.md), [notifications-and-messaging](notifications-and-messaging.md) | Alert, notification, message, dialog tiers |
 | Navigation | [navigation](https://ant.design/docs/spec/navigation) | [navigation-admin-ia](navigation-admin-ia.md), [ant-design-deep](ant-design-deep.md) |
-| Data entry | [data-entry](https://ant.design/docs/spec/data-entry) | [forms-validation-ux](forms-validation-ux.md) | Input, select, upload patterns |
+| Data entry | [data-entry](https://ant.design/docs/spec/data-entry) | [forms-validation-ux](forms-validation-ux.md), [page-templates](page-templates.md) § P5 | Input, select, upload; **settings** layouts |
 | Data display | [data-display](https://ant.design/docs/spec/data-display) | [data-tables-density](data-tables-density.md), [collaboration-surfaces](collaboration-surfaces.md) | Table, card, collapse, tree |
 | Copywriting | [copywriting](https://ant.design/docs/spec/copywriting) | [microcopy-voice](microcopy-voice.md) | User-centred, concise, consistent tone |
 | Data format | [data-format](https://ant.design/docs/spec/data-format) | [locale-and-content](locale-and-content.md) | Numbers, money, time, redaction, `--` empty |
@@ -83,11 +83,13 @@ Consolidated table: [ant-global-rules-index](ant-global-rules-index.md).
 
 ## Pattern templates (classic spec)
 
-| Ant doc | URL | Pattern | Local ref |
-| ------- | --- | ------- | --------- |
-| Detail page | [detail-page](https://ant.design/docs/spec/detail-page) | P2 | [page-templates](page-templates.md), [layout-design](layout-design.md) |
+| Ant doc | URL | Pattern | Local ref | Coverage |
+| ------- | --- | ------- | --------- | -------- |
+| Detail page | [detail-page](https://ant.design/docs/spec/detail-page) | P2 + P2a–P2d | [page-templates](page-templates.md) § P2, [pattern-vocabulary](pattern-vocabulary.md) | ✅ |
+| Template Document | (classic nav on [overview](https://ant.design/docs/spec/overview); body in [detail-page](https://ant.design/docs/spec/detail-page)) | P2b | [page-templates](page-templates.md) § P2b, [ant-design-comprehensive-guide](ant-design-comprehensive-guide.md) §9 | ✅ |
+| Visualization page | [visualization-page](https://ant.design/docs/spec/visualization-page) | — | [dashboards-and-viz](dashboards-and-viz.md) | ✅ |
 
-Other classic templates are named in [overview](https://ant.design/docs/spec/overview) and covered under **Research** below.
+Research-channel templates (list, form, workbench, …) are in the section below.
 
 ---
 
@@ -100,7 +102,7 @@ Exploration templates — authoritative for **list/form/workbench** layout decis
 | Research overview | [research-overview](https://ant.design/docs/spec/research-overview) | This file | Unstable; feedback-driven |
 | List page | [research-list](https://ant.design/docs/spec/research-list) | [page-templates](page-templates.md) P1, [search-and-filters](search-and-filters.md) | Query table, standard/card/search list; batch ops bottom |
 | Form page | [research-form](https://ant.design/docs/spec/research-form) | [forms-validation-ux](forms-validation-ux.md), [multi-step-flows](multi-step-flows.md) | Single column most efficient; step/group/card layouts |
-| Workbench | [research-workbench](https://ant.design/docs/spec/research-workbench) | [ant-design-comprehensive-guide](ant-design-comprehensive-guide.md) §10, [layout-design](layout-design.md) P4 | 5–9 modules; hub nav |
+| Workbench | [research-workbench](https://ant.design/docs/spec/research-workbench) | [page-templates](page-templates.md) § P4, [layout-design](layout-design.md), [ant-design-comprehensive-guide](ant-design-comprehensive-guide.md) §10 | 5–9 modules; hub nav; new-user guide |
 | Result page | [research-result](https://ant.design/docs/spec/research-result) | [page-templates](page-templates.md) P6 | Heavy feedback; ≤2 next actions |
 | Exception page | [research-exception](https://ant.design/docs/spec/research-exception) | [page-templates](page-templates.md) P7, [feedback-states](feedback-states.md) | 403/404/500; partial/loading/error matrix |
 | Empty status | [research-empty](https://ant.design/docs/spec/research-empty) | [feedback-states](feedback-states.md) | Clarity + invitation to act |

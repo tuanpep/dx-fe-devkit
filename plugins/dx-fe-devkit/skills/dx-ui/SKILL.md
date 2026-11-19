@@ -54,6 +54,7 @@ description: >-
 | Design review scoring | [design-review-scorecard](references/design-review-scorecard.md) |
 | Audit / refactor existing UI | `@dx-ui-review` |
 | Attach to your stack (template) | [project-binding-template](references/project-binding-template.md) |
+| Active product binding (when present) | [project-binding](references/project-binding.md) |
 | **Example: Mantine module binding** | [project-binding-compliance-mantine (example)](references/examples/project-binding-compliance-mantine.md) |
 
 ## Spacing tiers (Ant proximity)
@@ -71,7 +72,7 @@ Extended steps and token mapping: [spacing-hierarchy](references/spacing-hierarc
 ## Design workflow
 
 0. **Playbook** → [ant-design-comprehensive-guide](references/ant-design-comprehensive-guide.md) for Ant decisions and P1–P7 checklists.
-1. **Match context → choices** → [context-to-choices](references/context-to-choices.md) (job, P#, surface, density, filters). Then [pattern-vocabulary](references/pattern-vocabulary.md) + [page-templates](references/page-templates.md). Do not mix list + edit + decide on one screen.
+1. **Match context → choices** → [context-to-choices](references/context-to-choices.md) (job, P#, surface, density, filters). For **P2 detail**, pick Ant sub-template **P2a–P2d** from [page-templates](references/page-templates.md). Then [pattern-vocabulary](references/pattern-vocabulary.md) + [page-templates](references/page-templates.md). Do not mix list + edit + decide on one screen.
 2. **Layout** → [layout-design](references/layout-design.md) (shell, columns, scroll contract) + Ant grid notes in [ant-design-deep](references/ant-design-deep.md).
 3. **Surface** → [overlays-decision-tree](references/overlays-decision-tree.md).
 4. **Find data** → [search-and-filters](references/search-and-filters.md) (skip heavy filters on fixed work queues).
@@ -81,7 +82,7 @@ Extended steps and token mapping: [spacing-hierarchy](references/spacing-hierarc
 8. **States & messaging** → [feedback-states](references/feedback-states.md), [notifications-and-messaging](references/notifications-and-messaging.md).
 9. **Visual & language** → space/border before elevation; [visual-foundations](references/visual-foundations.md), [microcopy-voice](references/microcopy-voice.md), [locale-and-content](references/locale-and-content.md).
 10. **Accessibility** → [accessibility-wcag](references/accessibility-wcag.md).
-11. **Review** → [design-review-scorecard](references/design-review-scorecard.md).
+11. **Review** → [design-review-scorecard](references/design-review-scorecard.md) (P2/P4: score rows 14–15).
 
 ## Eight convergent principles
 

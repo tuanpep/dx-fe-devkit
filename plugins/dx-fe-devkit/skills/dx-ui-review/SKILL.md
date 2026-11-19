@@ -5,8 +5,9 @@ description: >-
   language and produces evidence-based gap reports and minimal refactoring plans.
   Use when auditing screens, PR UX review, aligning legacy list/detail/form
   flows, fixing layout/feedback/permissions/messaging drift, or planning
-  incremental UX refactors. Requires dx-ui for criteria; implementation
-  mapping stays in project binding skills. Does not prescribe component libraries.
+  incremental UX refactors. Requires dx-ui for criteria (scorecard dims 14–15
+  for P2 detail and P4 workbench); implementation mapping stays in project
+  binding skills. Does not prescribe component libraries.
 ---
 
 # DX product UI — review & refactor
@@ -37,9 +38,9 @@ dx-ui-review          ← this skill (process + outputs)
 ## Workflow
 
 1. **Scope** — screens, routes, or files in scope; out of scope explicit. See [audit-workflow](references/audit-workflow.md).
-2. **Inventory** — one row per screen: pattern ID, primary user job. [screen-inventory](references/screen-inventory.md).
-3. **Classify** — P1–P7 per screen; load matching `@dx-ui` refs (layout, templates, overlays).
-4. **Score** — `dx-ui` → [design-review-scorecard](../dx-ui/references/design-review-scorecard.md) per screen or flow.
+2. **Inventory** — one row per screen: pattern ID, **P2 sub-template when P2**, primary user job. [screen-inventory](references/screen-inventory.md).
+3. **Classify** — P1–P7 per screen via `dx-ui` [context-to-choices](../dx-ui/references/context-to-choices.md); for **P2**, name **P2a–P2d** sub-template; load matching `@dx-ui` refs (layout, templates, overlays).
+4. **Score** — `dx-ui` → [design-review-scorecard](../dx-ui/references/design-review-scorecard.md) per screen or flow (rows **14–15** when pattern is P2 / P4).
 5. **Gap report** — [gap-report-template](references/gap-report-template.md); every gap links `dx-ui/references/<file>.md`.
 6. **Prioritize** — [refactor-tiers](references/refactor-tiers.md): P0 blockers → P1 alignment → P2 polish.
 7. **Plan diff** — minimal changes; no drive-by refactors. [incremental-refactor](references/incremental-refactor.md).
@@ -79,3 +80,7 @@ Use **full** gap report + phased table in [incremental-refactor](references/incr
 **Error toast only “Failed”** — microcopy + notifications; tier P0 if blocks recovery.
 
 **Primary record opens in modal** — overlays-decision-tree violation; tier P0 or P1 depending on product spec.
+
+**Approval detail in tabs only** — P2 classified but sub-template wrong; score dim 14 at 0; fix: P2b document layout + workflow actions in header/footer; ref `page-templates` § P2b; tier P1.
+
+**Login lands on full data table** — mislabeled P4; score dim 1/15 low; fix: hub modules (5–9) + route to P1 list; ref `page-templates` § P4; tier P1.

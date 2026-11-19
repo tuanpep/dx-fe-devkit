@@ -7,4 +7,4 @@ Cursor plugin repo — marketplace at `.cursor-plugin/marketplace.json`, plugin 
 | [kit-catalog.md](plugins/dx-fe-devkit/skills/fe-kit/references/kit-catalog.md) | Skills & scope |
 | [repo-binding-template.md](plugins/dx-fe-devkit/skills/fe-kit/references/repo-binding-template.md) | What consumer repos commit |
 
-Hub: `@fe-kit` (11 skills under `plugins/dx-fe-devkit/skills/`).
+Hub: `@fe-kit` (12 skills under `plugins/dx-fe-devkit/skills/`, including `@fe-git-workflow`).

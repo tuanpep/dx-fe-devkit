@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.4.0 — 2026-11-19
+
+- Hub-style expansion for **fe-performance**, **fe-security**, **fe-testing**, **fe-forms**, **fe-naming**, **fe-i18n** (reference docs + binding fields).
+- **fe-architecture**: agent workflow, standards comparison, richer feature boundaries.
+- New **fe-git-workflow** skill (12 skills); **fe-kit** routing and **repo-binding-template** updated.
+- **dx-ui** / **dx-ui-review** documentation updates.
+
 ## 0.3.2 — 2026-04-01
 
 - Move plugin payload under `plugins/dx-fe-devkit/` so team marketplace `pluginRoot` resolves (fixes install ENOENT).

@@ -29,6 +29,8 @@ Do not start with shared library extraction unless two screens already share the
 | B | Async states | feedback-states, notifications-and-messaging |
 | C | Tables | data-tables-density, selection-and-bulk-actions |
 | D | Forms | forms-validation-ux, multi-step-flows |
+| E | Detail templates | page-templates P2 (P2a–P2d); approval flows → P2b before tabs/cards |
+| F | Hub home | page-templates P4 only when screen is app home / workbench |
 
 Complete verification for family A before starting B on the same screens if possible.
 
@@ -38,6 +40,8 @@ Complete verification for family A before starting B on the same screens if poss
 | ----- | ---- | ------- | ------------- |
 | 1 | P0 gaps | S01–S05 | Scorecard no 0 on trust/a11y/feedback |
 | 2a | List alignment | S01,S04 | Dim 2 on template, navigation, search |
+| 2b | Detail sub-template | P2 screens | Dim 14 ≥ 1 (target 2) per [design-review-scorecard](../../dx-ui/references/design-review-scorecard.md) |
+| 2c | Workbench | P4 home | Dim 15 ≥ 1 (target 2) |
 
 ## Handoff to implementation
 

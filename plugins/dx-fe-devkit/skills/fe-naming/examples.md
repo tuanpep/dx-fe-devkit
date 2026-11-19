@@ -1,5 +1,7 @@
 # Naming examples
 
+More rules: [references/identifiers-typescript-react.md](references/identifiers-typescript-react.md), [anti-patterns.md](references/anti-patterns.md).
+
 ## TypeScript / React
 
 ```typescript
@@ -20,17 +22,6 @@ const ReservationItem = <ReservationCard />;
 const reservationItem = <ReservationCard />;
 ```
 
-## sample-admin-style paths
-
-```
-apps/admin/src/modules/catalog-management/
-  features/order-records/
-    ui/list/OrderRecordsPage.tsx
-    ui/list/OrderRecordsPage.spec.ts
-    domain/create/batchCreate.spec.ts
-  ui/display/numberInput.spec.ts
-```
-
 ## Meaningful distinction
 
 ```typescript
@@ -39,4 +30,38 @@ function copyMessage(msg1: Message, msg2: Message) { ... }
 
 // good
 function copyMessage(destination: Message, source: Message) { ... }
+```
+
+## Query keys
+
+```typescript
+// bad — id not in key
+queryKey: ['orders', 'detail'],
+queryFn: () => fetchOrder(orderId),
+
+// good
+queryKey: orderKeys.detail(orderId),
+queryFn: () => fetchOrder(orderId),
+```
+
+## Paths (sample-admin style)
+
+```text
+apps/admin/src/modules/catalog-management/
+  features/order-records/
+    ui/list/OrderRecordsPage.tsx
+    ui/list/OrderRecordsPage.spec.ts
+    domain/create/batchCreate.spec.ts
+    data/orderKeys.ts
+    data/queries.ts
+```
+
+## i18n
+
+```typescript
+// bad
+t('Click here to save the order');
+
+// good
+t('catalog.orderRecords.form.actions.save');
 ```

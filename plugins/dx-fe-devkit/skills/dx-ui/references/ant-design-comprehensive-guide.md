@@ -302,6 +302,8 @@ Source: [detail-page](https://ant.design/docs/spec/detail-page).
 
 Information complexity × correlation → template choice (same logic as form layout).
 
+**Recipes and checklists:** [page-templates](page-templates.md) § P2 (P2a–P2d).
+
 ---
 
 ## 10. Workbench (P4 / home)
@@ -309,6 +311,8 @@ Information complexity × correlation → template choice (same logic as form la
 Source: [research-workbench](https://ant.design/docs/spec/research-workbench).
 
 **Goals:** Shortest path to frequent tasks; hub navigation; optional ops content.
+
+**Recipes and checklists:** [page-templates](page-templates.md) § P4.
 
 | Module | Guidance |
 | ------ | ---------- |

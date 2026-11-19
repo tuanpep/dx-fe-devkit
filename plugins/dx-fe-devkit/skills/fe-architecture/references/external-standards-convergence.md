@@ -16,4 +16,4 @@ Short OSS alignment. App defaults: [oss-fe-matrix.md](oss-fe-matrix.md).
 - **React Query** — keys include all `queryFn` inputs; hooks in `data/`.
 - **PRs** — prefer layer order: api → data → domain → ui.
 
-Links: [external-standards-sources.md](external-standards-sources.md).
+Links: [external-standards-sources.md](external-standards-sources.md), [standards-comparison.md](standards-comparison.md).

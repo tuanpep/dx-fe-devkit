@@ -8,6 +8,8 @@ Re-run after changes; compare to pre-change scorecard.
 | ----- | ------------- |
 | Keyboard | Tab through primary path; activate main actions |
 | List loop | Open detail (if applicable) → back → filters/page preserved per spec |
+| Detail sub-template | P2 matches job (e.g. approval → P2b actions visible; low complexity → P2a not over-tabbed) |
+| Workbench (P4) | 5–9 modules; module errors isolated; not a disguised full list home |
 | Empty | Global empty vs filtered empty distinguishable |
 | Error | Recoverable error shows reason+fix + retry if applicable |
 | Overlay | Escape dismisses non-blocking overlays; focus returns |
@@ -15,7 +17,7 @@ Re-run after changes; compare to pre-change scorecard.
 
 ## Scorecard re-run
 
-Full `dx-ui` design-review-scorecard for changed screens; attach in PR.
+Full `dx-ui` [design-review-scorecard](../../dx-ui/references/design-review-scorecard.md) for changed screens; attach in PR. Include dimensions **14** (P2) and **15** (P4) when those patterns changed.
 
 ## Regression scope
 

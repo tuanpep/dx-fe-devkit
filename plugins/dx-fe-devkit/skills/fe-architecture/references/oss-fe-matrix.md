@@ -1,6 +1,6 @@
 # OSS → vertical-slice mapping
 
-Defaults unless module `AGENTS.md` overrides. Background: [external-standards-convergence.md](external-standards-convergence.md).
+Defaults unless module `AGENTS.md` overrides. Background: [external-standards-convergence.md](external-standards-convergence.md). Side-by-side: [standards-comparison.md](standards-comparison.md).
 
 ## Structure
 

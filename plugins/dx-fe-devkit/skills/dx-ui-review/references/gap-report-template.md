@@ -8,13 +8,15 @@ Every gap **must** cite: `dx-ui/references/<file>.md` § concept (not line numbe
 ## UX review — [PR title]
 
 **Scope:** [screens]
-**Pattern(s):** P1 / P2 / …
+**Pattern(s):** P1 / P2 (+ P2a–P2d if detail) / …
 **Sibling reference:** [name or n/a]
 
 ### Scorecard (0–2)
 | Dimension | Score | Note |
 |-----------|-------|------|
-| … | | |
+| 1–13 | | |
+| 14 Detail sub-template | — / 0–2 | Required when pattern is P2 |
+| 15 Workbench layout | — / 0–2 | Required when pattern is P4 |
 
 ### Blockers (P0)
 - [ ] [Gap] → ref: `…` → proposed fix (1 sentence)
@@ -42,8 +44,8 @@ Every gap **must** cite: `dx-ui/references/<file>.md` § concept (not line numbe
 ### Findings by screen
 
 #### [S01] [name]
-- **Pattern:** P1
-- **Scorecard:** [table]
+- **Pattern:** P1 (sub-template: P2b / —)
+- **Scorecard:** [table incl. 14–15 when applicable]
 - **Gaps:**
   1. **[Tier]** [Observation] — criterion: `dx-ui/...` — **Fix:** [minimal change]
 
@@ -66,3 +68,4 @@ Every gap **must** cite: `dx-ui/references/<file>.md` § concept (not line numbe
 | “List resets filters on back; violates queue persistence” | “Improve navigation” |
 | Ref `search-and-filters` + `layout-design` | “Make it like Ant Design Pro” |
 | One fix per gap | Bundle ten unrelated edits |
+| “Tabs on simple detail” without citing P2a vs P2c | Name sub-template + `page-templates` § P2 |

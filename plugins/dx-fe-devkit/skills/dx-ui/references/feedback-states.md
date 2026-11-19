@@ -1,6 +1,6 @@
 # Feedback states (loading, empty, error, success)
 
-Ant sources: [feedback](https://ant.design/docs/spec/feedback), [research-exception](https://ant.design/docs/spec/research-exception), [research-empty](https://ant.design/docs/spec/research-empty). Index: [ant-spec-index](ant-spec-index.md).
+Ant sources: [feedback](https://ant.design/docs/spec/feedback), [research-exception](https://ant.design/docs/spec/research-exception), [research-empty](https://ant.design/docs/spec/research-empty), [illustration](https://ant.design/docs/spec/illustration). Index: [ant-spec-index](ant-spec-index.md).
 
 **Page state matrix (Ant):** ideal → partial → loading → error → empty. Empty includes guided new-user, cleared queue, and no-data search.
 
@@ -56,6 +56,18 @@ Map API codes:
 | `error` | Failed fetch |
 
 Define empty/error **tones** once per product (e.g. global empty vs filtered empty vs fault)—document in project binding.
+
+## Illustrations (Ant illustration)
+
+Use illustration only when it **invites action** or orients a **first-use or exception** moment—not on routine empty tables.
+
+| Situation | Illustration |
+| --------- | ------------ |
+| Global empty, new user, P7 exception | Optional; pair with **one** clear CTA ([invitation](https://ant.design/docs/spec/invitation)) |
+| Filtered empty, dense admin queues | Text + action only—no hero art |
+| Loading / partial | Skeleton or inline status—not decorative illustration |
+
+Reuse a **small product illustration set** from binding; do not invent one-off art per screen.
 
 ## Anti-patterns
 
